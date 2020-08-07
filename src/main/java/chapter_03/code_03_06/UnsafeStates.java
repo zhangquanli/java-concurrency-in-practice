@@ -1,5 +1,8 @@
-package chapter_03;
+package chapter_03.code_03_06;
 
+/**
+ * Allowing internal mutable state to escape.
+ */
 public class UnsafeStates {
     private String[] states = new String[]{"AK", "Al"};
 

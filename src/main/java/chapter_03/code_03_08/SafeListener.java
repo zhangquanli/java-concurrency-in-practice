@@ -1,15 +1,13 @@
-package chapter_03;
+package chapter_03.code_03_08;
 
+/**
+ * Using a factory method to prevent the this reference from escaping during construction.
+ */
 public class SafeListener {
     private final EventListener listener;
 
     private SafeListener() {
-        listener = new EventListener() {
-            @Override
-            public void onEvent(Event e) {
-                doSomething(e);
-            }
-        };
+        listener = this::doSomething;
     }
 
     public static SafeListener newInstance(EventSource source) {
@@ -18,7 +16,7 @@ public class SafeListener {
         return safe;
     }
 
-    void doSomething(Event e) {
+    private void doSomething(Event e) {
     }
 
     interface EventSource {

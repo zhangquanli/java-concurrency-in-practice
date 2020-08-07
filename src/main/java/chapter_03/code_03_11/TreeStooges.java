@@ -1,10 +1,16 @@
-package chapter_03;
+package chapter_03.code_03_11;
+
+import net.jcip.annotations.Immutable;
 
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.Vector;
 
+/**
+ * Immutable class built out of mutable underlying objects.
+ */
+@Immutable
 public final class TreeStooges {
     private final Set<String> stooges = new HashSet<>();
 

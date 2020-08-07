@@ -1,16 +1,14 @@
-package chapter_03;
+package chapter_03.code_03_07;
 
+/**
+ * Implicitly allowing the this reference to escape.
+ */
 public class ThisEscape {
     public ThisEscape(EventSource source) {
-        source.registerListener(new EventListener() {
-            @Override
-            public void onEvent(Event e) {
-                doSomething(e);
-            }
-        });
+        source.registerListener(this::doSomething);
     }
 
-    void doSomething(Event e) {
+    private void doSomething(Event e) {
     }
 
     interface EventSource {

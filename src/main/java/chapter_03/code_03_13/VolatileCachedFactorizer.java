@@ -1,4 +1,7 @@
-package chapter_03;
+package chapter_03.code_03_13;
+
+import chapter_03.code_03_12.OneValueCache;
+import net.jcip.annotations.ThreadSafe;
 
 import javax.servlet.GenericServlet;
 import javax.servlet.Servlet;
@@ -6,6 +9,10 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import java.math.BigInteger;
 
+/**
+ * Caching the last result using a volatile reference to an immutable holder object.
+ */
+@ThreadSafe
 public class VolatileCachedFactorizer extends GenericServlet implements Servlet {
     private volatile OneValueCache cache = new OneValueCache(null, null);
 
@@ -19,14 +26,15 @@ public class VolatileCachedFactorizer extends GenericServlet implements Servlet 
         encodeIntoResponse(resp, factors);
     }
 
-    private void encodeIntoResponse(ServletResponse resp, BigInteger[] factors) {
-    }
-
     private BigInteger extractFromRequest(ServletRequest req) {
         return new BigInteger("7");
     }
 
     private BigInteger[] factor(BigInteger i) {
+        // Doesn't really factor
         return new BigInteger[]{i};
+    }
+
+    private void encodeIntoResponse(ServletResponse resp, BigInteger[] factors) {
     }
 }

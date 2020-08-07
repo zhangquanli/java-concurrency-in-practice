@@ -1,5 +1,8 @@
-package chapter_03;
+package chapter_03.code_03_01;
 
+/**
+ * Sharing variables without synchronization.
+ */
 public class NoVisibility {
     private static boolean ready;
     private static int number;

@@ -1,7 +1,10 @@
-package chapter_03;
+package chapter_03.code_03_09;
 
 import java.util.*;
 
+/**
+ * Thread confinement of local primitive and reference variables.
+ */
 public class Animals {
     Ark ark;
     Species species;
