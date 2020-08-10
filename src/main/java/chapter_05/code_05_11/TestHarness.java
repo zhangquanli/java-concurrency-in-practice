@@ -6,7 +6,6 @@ import java.util.concurrent.CountDownLatch;
  * Using CountDownLatch for starting and stopping threads in timing tests.
  */
 public class TestHarness {
-
     public long timeTasks(int nThreads, final Runnable task) throws InterruptedException {
         final CountDownLatch startGate = new CountDownLatch(1);
         final CountDownLatch endGate = new CountDownLatch(nThreads);
