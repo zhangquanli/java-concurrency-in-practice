@@ -2,6 +2,9 @@ package chapter_05.code_05_11;
 
 import java.util.concurrent.CountDownLatch;
 
+/**
+ * Using CountDownLatch for starting and stopping threads in timing tests.
+ */
 public class TestHarness {
 
     public long timeTasks(int nThreads, final Runnable task) throws InterruptedException {
