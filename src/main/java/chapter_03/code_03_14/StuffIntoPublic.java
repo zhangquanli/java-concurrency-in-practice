@@ -1,6 +1,6 @@
 package chapter_03.code_03_14;
 
-import chapter_03.code_05_15.Holder;
+import chapter_03.code_03_15.Holder;
 
 /**
  * Publishing an object without adequate synchronization.

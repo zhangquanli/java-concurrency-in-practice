@@ -1,4 +1,4 @@
-package chapter_03.code_05_15;
+package chapter_03.code_03_15;
 
 /**
  * Class at risk of failure if not properly published.
