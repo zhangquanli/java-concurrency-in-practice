@@ -1,6 +1,3 @@
-package net.jcip.annotations;
-import java.lang.annotation.*;
-
 /*
  * Copyright (c) 2005 Brian Goetz and Tim Peierls
  * Released under the Creative Commons Attribution License
@@ -11,7 +8,9 @@ import java.lang.annotation.*;
  * must include this copyright and license notice.
  */
 
+package net.jcip.annotations;
 
+import java.lang.annotation.*;
 
 /**
  * The class to which this annotation is applied is thread-safe.  This means that

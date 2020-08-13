@@ -1,4 +1,4 @@
-package chapter_05.code_05_15;
+package chapter_05.code_15;
 
 import java.util.concurrent.CyclicBarrier;
 
