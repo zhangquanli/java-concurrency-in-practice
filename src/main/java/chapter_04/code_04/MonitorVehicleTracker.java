@@ -1,10 +1,19 @@
-package chapter_04;
+package chapter_04.code_04;
+
+import chapter_04.code_05.MutablePoint;
+import net.jcip.annotations.GuardedBy;
+import net.jcip.annotations.ThreadSafe;
 
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Monitor-based vehicle tracker implementation.
+ */
+@ThreadSafe
 public class MonitorVehicleTracker {
+    @GuardedBy("this")
     private final Map<String, MutablePoint> locations;
 
     public MonitorVehicleTracker(Map<String, MutablePoint> locations) {

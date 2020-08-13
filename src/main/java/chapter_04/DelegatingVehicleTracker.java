@@ -1,6 +1,6 @@
 package chapter_04;
 
-import chapter_04.Point;
+import chapter_04.code_06.Point;
 
 import java.util.Collections;
 import java.util.HashMap;

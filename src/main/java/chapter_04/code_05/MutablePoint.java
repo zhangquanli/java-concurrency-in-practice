@@ -1,5 +1,11 @@
-package chapter_04;
+package chapter_04.code_05;
 
+import net.jcip.annotations.NotThreadSafe;
+
+/**
+ * Mutable Point class similar to java.awt.Point.
+ */
+@NotThreadSafe
 public class MutablePoint {
     public int x, y;
 

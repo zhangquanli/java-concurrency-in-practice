@@ -1,5 +1,8 @@
-package chapter_04;
+package chapter_04.code_06;
 
+/**
+ * Immutable Point class used by DelegatingVehicleTracker.
+ */
 public class Point {
     public final int x, y;
 
