@@ -5,5 +5,5 @@ package chapter_07.code_04;
  * <p>
  * http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Thread.html#method_summary
  */
-public class CodeThread {
+public interface code_thread {
 }
