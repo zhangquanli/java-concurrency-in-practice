@@ -7,12 +7,12 @@ import java.util.concurrent.TimeUnit;
 /**
  * ExecutorService that keeps track of cancelled tasks after shutdown.
  */
-public class TrackingService {
+public class TrackingExecutor {
     private final ExecutorService exec;
     private final Set<Runnable> tasksCancelledAtShutdown =
             Collections.synchronizedSet(new HashSet<>());
 
-    public TrackingService(ExecutorService exec) {
+    public TrackingExecutor(ExecutorService exec) {
         this.exec = exec;
     }
 
