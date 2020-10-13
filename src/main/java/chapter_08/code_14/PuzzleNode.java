@@ -24,6 +24,14 @@ public class PuzzleNode<P, M> {
         return pos;
     }
 
+    public M getMove() {
+        return move;
+    }
+
+    public PuzzleNode<P, M> getPrev() {
+        return prev;
+    }
+
     public List<M> asMoveList() {
         List<M> solution = new LinkedList<>();
         for (PuzzleNode<P, M> n = this; n.move != null; n = n.prev) {
