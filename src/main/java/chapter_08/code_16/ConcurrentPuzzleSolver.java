@@ -41,7 +41,7 @@ public class ConcurrentPuzzleSolver<P, M> {
     }
 
     protected class SolverTask extends PuzzleNode<P, M> implements Runnable {
-        SolverTask(P pos, M move, PuzzleNode<P, M> prev) {
+        protected SolverTask(P pos, M move, PuzzleNode<P, M> prev) {
             super(pos, move, prev);
         }
 
