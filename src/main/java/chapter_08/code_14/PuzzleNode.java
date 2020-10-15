@@ -1,5 +1,7 @@
 package chapter_08.code_14;
 
+import net.jcip.annotations.Immutable;
+
 import java.util.LinkedList;
 import java.util.List;
 
@@ -9,6 +11,7 @@ import java.util.List;
  * @param <P> 位置类
  * @param <M> 移动类
  */
+@Immutable
 public class PuzzleNode<P, M> {
     private final P pos;
     private final M move;
