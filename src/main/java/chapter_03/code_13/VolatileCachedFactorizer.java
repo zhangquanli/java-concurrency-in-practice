@@ -10,7 +10,7 @@ import javax.servlet.ServletResponse;
 import java.math.BigInteger;
 
 /**
- * Caching the last result using a volatile reference to an immutable holder object.
+ * 程序清单 3-13 使用指向不可变容器对象的 volatile 类型引用以缓存最新的结果
  */
 @ThreadSafe
 public class VolatileCachedFactorizer extends GenericServlet implements Servlet {
@@ -31,7 +31,6 @@ public class VolatileCachedFactorizer extends GenericServlet implements Servlet 
     }
 
     private BigInteger[] factor(BigInteger i) {
-        // Doesn't really factor
         return new BigInteger[]{i};
     }
 
