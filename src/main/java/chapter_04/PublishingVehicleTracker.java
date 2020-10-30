@@ -1,5 +1,7 @@
 package chapter_04;
 
+import chapter_04.code_11.SafePoint;
+
 import java.util.Collections;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;

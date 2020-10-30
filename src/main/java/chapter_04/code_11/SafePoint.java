@@ -1,6 +1,12 @@
-package chapter_04;
+package chapter_04.code_11;
 
+import net.jcip.annotations.GuardedBy;
+
+/**
+ * 程序清单 4-11 线程安全且可变的 Point 类
+ */
 public class SafePoint {
+    @GuardedBy("this")
     private int x, y;
 
     private SafePoint(int[] a) {
