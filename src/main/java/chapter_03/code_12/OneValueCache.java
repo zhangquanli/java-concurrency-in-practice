@@ -6,7 +6,7 @@ import java.math.BigInteger;
 import java.util.Arrays;
 
 /**
- * Immutable holder for caching a number and its factors.
+ * 程序清单 3-12 对数值及其因数分解结果进行缓存的不可变容器类
  */
 @Immutable
 public class OneValueCache {
