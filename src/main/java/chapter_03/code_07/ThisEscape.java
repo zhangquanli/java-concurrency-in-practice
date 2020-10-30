@@ -1,7 +1,7 @@
 package chapter_03.code_07;
 
 /**
- * Implicitly allowing the this reference to escape.
+ * 程序清单 3-7 隐式地使 this 引用逸出（不要这么做）
  */
 public class ThisEscape {
     public ThisEscape(EventSource source) {
