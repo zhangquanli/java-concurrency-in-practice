@@ -1,8 +1,11 @@
 package chapter_04.code_06;
 
+import net.jcip.annotations.Immutable;
+
 /**
- * Immutable Point class used by DelegatingVehicleTracker.
+ * 程序清单 4-6 在 DelegatingVehicleTracker 中使用的不可变 Point 类
  */
+@Immutable
 public class Point {
     public final int x, y;
 

@@ -1,4 +1,4 @@
-package chapter_04;
+package chapter_04.code_07;
 
 import chapter_04.code_06.Point;
 
