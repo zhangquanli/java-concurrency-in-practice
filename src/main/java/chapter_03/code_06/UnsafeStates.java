@@ -1,7 +1,7 @@
 package chapter_03.code_06;
 
 /**
- * Allowing internal mutable state to escape.
+ * 程序清单 3-6 使内部的可变状态逸出（不要这么做）
  */
 public class UnsafeStates {
     private String[] states = new String[]{"AK", "Al"};
