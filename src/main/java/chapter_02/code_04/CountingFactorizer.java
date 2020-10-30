@@ -10,7 +10,7 @@ import java.math.BigInteger;
 import java.util.concurrent.atomic.AtomicLong;
 
 /**
- * Servlet that counts requests using AtomicLong.
+ * 程序清单 2-4 使用 AtomicLong 类型的变量来统计已处理请求的数量
  */
 @ThreadSafe
 public class CountingFactorizer extends GenericServlet implements Servlet {
