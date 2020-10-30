@@ -9,7 +9,7 @@ import javax.servlet.ServletResponse;
 import java.math.BigInteger;
 
 /**
- * A stateless servlet.
+ * 程序清单 2-1 一个无状态的 Servlet
  */
 @ThreadSafe
 public class StatelessFactorizer extends GenericServlet implements Servlet {
@@ -25,7 +25,6 @@ public class StatelessFactorizer extends GenericServlet implements Servlet {
     }
 
     private BigInteger[] factor(BigInteger i) {
-        // Doesn't really factor
         return new BigInteger[]{i};
     }
 
