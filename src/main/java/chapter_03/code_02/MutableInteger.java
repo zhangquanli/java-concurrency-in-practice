@@ -3,7 +3,7 @@ package chapter_03.code_02;
 import net.jcip.annotations.NotThreadSafe;
 
 /**
- * Non-thread-safe mutable integer holder.
+ * 程序清单 3-2 非线程安全的可变整数类
  */
 @NotThreadSafe
 public class MutableInteger {
