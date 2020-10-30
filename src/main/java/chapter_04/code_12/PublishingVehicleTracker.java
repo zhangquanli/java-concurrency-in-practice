@@ -1,11 +1,16 @@
-package chapter_04;
+package chapter_04.code_12;
 
 import chapter_04.code_11.SafePoint;
+import net.jcip.annotations.ThreadSafe;
 
 import java.util.Collections;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+/**
+ * 程序清单 4-12 安全发布底层状态的车辆追踪器
+ */
+@ThreadSafe
 public class PublishingVehicleTracker {
     private final Map<String, SafePoint> locations;
     private final Map<String, SafePoint> unmodifiableMap;
