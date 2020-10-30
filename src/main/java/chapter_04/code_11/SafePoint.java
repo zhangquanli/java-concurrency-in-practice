@@ -1,10 +1,12 @@
 package chapter_04.code_11;
 
 import net.jcip.annotations.GuardedBy;
+import net.jcip.annotations.ThreadSafe;
 
 /**
  * 程序清单 4-11 线程安全且可变的 Point 类
  */
+@ThreadSafe
 public class SafePoint {
     @GuardedBy("this")
     private int x, y;
