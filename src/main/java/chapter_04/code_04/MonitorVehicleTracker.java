@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Monitor-based vehicle tracker implementation.
+ * 程序清单 4-4 基于监视器模式的车辆追踪
  */
 @ThreadSafe
 public class MonitorVehicleTracker {
