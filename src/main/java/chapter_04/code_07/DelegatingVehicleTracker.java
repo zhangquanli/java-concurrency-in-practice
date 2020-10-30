@@ -1,6 +1,7 @@
 package chapter_04.code_07;
 
 import chapter_04.code_06.Point;
+import net.jcip.annotations.ThreadSafe;
 
 import java.util.Collections;
 import java.util.HashMap;
@@ -11,6 +12,7 @@ import java.util.concurrent.ConcurrentMap;
 /**
  * 程序清单 4-7 将线程安全委托给 ConcurrentHashMap
  */
+@ThreadSafe
 public class DelegatingVehicleTracker {
     private final ConcurrentMap<String, Point> locations;
     private final Map<String, Point> unmodifiableMap;
