@@ -4,7 +4,7 @@ import net.jcip.annotations.GuardedBy;
 import net.jcip.annotations.ThreadSafe;
 
 /**
- * Thread-safe mutable integer holder.
+ * 程序清单 3-3 线程安全的可变整数类
  */
 @ThreadSafe
 public class SynchronizedInteger {
