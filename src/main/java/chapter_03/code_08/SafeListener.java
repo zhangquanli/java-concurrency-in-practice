@@ -1,7 +1,7 @@
 package chapter_03.code_08;
 
 /**
- * Using a factory method to prevent the this reference from escaping during construction.
+ * 程序清单 3-8 使用工厂方法来防止 this 引用在构造过程中逸出
  */
 public class SafeListener {
     private final EventListener listener;
