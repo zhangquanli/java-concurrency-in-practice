@@ -1,10 +1,10 @@
 package chapter_03.code_04;
 
 /**
- * Counting sheep.
+ * 程序清单 3-4 数绵羊
  */
 public class CountingSheep {
-    volatile boolean asleep;
+    private volatile boolean asleep;
 
     public void tryToSleep() {
         while (!asleep) {
@@ -13,6 +13,5 @@ public class CountingSheep {
     }
 
     private void countSomeSheep() {
-        // One, two, three...
     }
 }
