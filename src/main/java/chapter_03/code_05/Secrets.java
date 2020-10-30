@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Publishing an object.
+ * 程序清单 3-5 发布一个对象
  */
 public class Secrets {
     public static Set<Secret> knownSecrets;
