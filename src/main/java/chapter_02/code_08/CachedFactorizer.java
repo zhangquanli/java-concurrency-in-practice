@@ -10,7 +10,7 @@ import javax.servlet.ServletResponse;
 import java.math.BigInteger;
 
 /**
- * Servlet that caches its last request and result.
+ * 程序清单 2-8 缓存最近执行因式分解的数值及其计算结果的 Servlet
  */
 @ThreadSafe
 public class CachedFactorizer extends GenericServlet implements Servlet {
@@ -56,7 +56,6 @@ public class CachedFactorizer extends GenericServlet implements Servlet {
     }
 
     private BigInteger[] factor(BigInteger i) {
-        // Doesn't really factor
         return new BigInteger[]{i};
     }
 
