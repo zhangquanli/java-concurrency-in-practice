@@ -5,12 +5,12 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 /**
- * Using ThreadLocal to ensure thread confinement.
+ * 程序清单 3-10 使用 ThreadLocal 来维持线程封闭性
  */
 public class ConnectionDispenser {
-    private static String DB_URL = "jdbc:mysql://localhost/mydatabase";
+    private static final String DB_URL = "jdbc:mysql://localhost/mydatabase";
 
-    private ThreadLocal<Connection> connectionHolder = ThreadLocal.withInitial(() -> {
+    private static ThreadLocal<Connection> connectionHolder = ThreadLocal.withInitial(() -> {
         try {
             return DriverManager.getConnection(DB_URL);
         } catch (SQLException e) {
@@ -18,7 +18,7 @@ public class ConnectionDispenser {
         }
     });
 
-    public Connection getConnection() {
+    public static Connection getConnection() {
         return connectionHolder.get();
     }
 }
