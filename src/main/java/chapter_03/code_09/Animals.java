@@ -3,7 +3,7 @@ package chapter_03.code_09;
 import java.util.*;
 
 /**
- * Thread confinement of local primitive and reference variables.
+ * 程序清单 3-9 基本类型的局部变量与引用变量的线程封闭性
  */
 public class Animals {
     Ark ark;
@@ -15,6 +15,7 @@ public class Animals {
         int numParis = 0;
         Animal candidate = null;
 
+        // animals 被封闭在方法中，不要使它们逸出
         animals = new TreeSet<>(new SpeciesGenderComparator());
         animals.addAll(candidates);
         for (Animal a : animals) {
