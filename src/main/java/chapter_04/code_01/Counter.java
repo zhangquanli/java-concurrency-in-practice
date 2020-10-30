@@ -4,7 +4,7 @@ import net.jcip.annotations.GuardedBy;
 import net.jcip.annotations.ThreadSafe;
 
 /**
- * Simple thread-safe counter using the Java monitor pattern.
+ * 程序清单 4-1 使用 Java 监视器模式的线程安全计数器
  */
 @ThreadSafe
 public class Counter {
