@@ -10,7 +10,7 @@ import javax.servlet.ServletResponse;
 import java.math.BigInteger;
 
 /**
- * Servlet that caches last result, but with unnacceptably poor concurrency.
+ * 程序清单 2-6 这个 Servlet 能正确地缓存最新的计算结果，但并发性却非常糟糕（不要这么做）
  */
 @ThreadSafe
 public class SynchronizedFactorizer extends GenericServlet implements Servlet {
@@ -35,7 +35,6 @@ public class SynchronizedFactorizer extends GenericServlet implements Servlet {
     }
 
     private BigInteger[] factor(BigInteger i) {
-        // Doesn't really factor
         return new BigInteger[]{i};
     }
 
