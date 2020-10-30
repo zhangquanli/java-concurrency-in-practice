@@ -13,6 +13,6 @@ public class Secrets {
         knownSecrets = new HashSet<>();
     }
 
-    static class Secret {
+    public static class Secret {
     }
 }
