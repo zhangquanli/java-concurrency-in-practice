@@ -8,7 +8,7 @@ import java.util.Set;
 import java.util.Vector;
 
 /**
- * Immutable class built out of mutable underlying objects.
+ * 程序清单 3-11 在可变对象基础上构建的不可变类
  */
 @Immutable
 public final class TreeStooges {
