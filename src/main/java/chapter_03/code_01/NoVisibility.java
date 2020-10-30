@@ -1,7 +1,7 @@
 package chapter_03.code_01;
 
 /**
- * Sharing variables without synchronization.
+ * 程序清单 3-1 在没有同步的情况下共享变量（不要这么做）
  */
 public class NoVisibility {
     private static boolean ready;
