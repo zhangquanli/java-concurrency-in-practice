@@ -1,7 +1,7 @@
 package chapter_03.code_15;
 
 /**
- * Class at risk of failure if not properly published.
+ * 程序清单 3-15 由于未被正确发布，因此这个类可能出现故障
  */
 public class Holder {
     private int n;
