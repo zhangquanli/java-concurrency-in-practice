@@ -10,7 +10,7 @@ import java.math.BigInteger;
 import java.util.concurrent.atomic.AtomicReference;
 
 /**
- * Servlet that attempts to cache its last result without adequate atomicity.
+ * 程序清单 2-5 该 Servlet 在没有足够原子性保证的情况下对其最近计算结果进行缓存（不要这么做）
  */
 @NotThreadSafe
 public class UnsafeCachingFactorizer extends GenericServlet implements Servlet {
@@ -34,7 +34,6 @@ public class UnsafeCachingFactorizer extends GenericServlet implements Servlet {
     }
 
     private BigInteger[] factor(BigInteger i) {
-        // Doesn't really factor
         return new BigInteger[]{i};
     }
 
