@@ -1,10 +1,13 @@
-package chapter_05;
+package chapter_05.code_08;
 
 import java.io.File;
 import java.io.FileFilter;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 
+/**
+ * 程序清单 5-8 桌面搜索应用程序中的生产者任务和消费者任务
+ */
 public class ProducerConsumer {
     static class FileCrawler implements Runnable {
         private final BlockingQueue<File> fileQueue;
@@ -65,7 +68,6 @@ public class ProducerConsumer {
         }
 
         public void indexFile(File file) {
-            // Index the file...
         }
     }
 
