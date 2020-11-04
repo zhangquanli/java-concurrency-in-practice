@@ -6,7 +6,7 @@ import java.util.Set;
 import java.util.concurrent.Semaphore;
 
 /**
- * Using Semaphore to bound a collection.
+ * 程序清单 5-14 使用 Semaphore 为容器设置边界
  */
 public class BoundedHashSet<T> {
     private final Set<T> set;
