@@ -6,7 +6,7 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.FutureTask;
 
 /**
- * Using FutureTask to preload data that is needed later.
+ * 程序清单 5-12 使用 FutureTask 来提前加载稍后需要的数据
  */
 public class Preloader {
     private final FutureTask<ProductInfo> future = new FutureTask<>(this::loadProductInfo);
