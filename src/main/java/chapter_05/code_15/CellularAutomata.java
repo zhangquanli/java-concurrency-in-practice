@@ -3,7 +3,7 @@ package chapter_05.code_15;
 import java.util.concurrent.CyclicBarrier;
 
 /**
- * Coordinating computation in a cellular automaton with CyclicBarrier.
+ * 程序清单 5-15 通过 CyclicBarrier 协调细胞自动衍生系统中的计算
  */
 public class CellularAutomata {
     private final Board mainBoard;
