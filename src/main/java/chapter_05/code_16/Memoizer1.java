@@ -2,7 +2,6 @@ package chapter_05.code_16;
 
 import net.jcip.annotations.GuardedBy;
 
-import java.math.BigInteger;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -27,16 +26,3 @@ public class Memoizer1<A, V> implements Computable<A, V> {
         return result;
     }
 }
-
-class ExpensiveFunction implements Computable<String, BigInteger> {
-    public BigInteger compute(String arg) {
-        // 在经过长时间的计算后
-        return new BigInteger(arg);
-    }
-}
-
-interface Computable<A, V> {
-    V compute(A arg) throws InterruptedException;
-}
-
-
