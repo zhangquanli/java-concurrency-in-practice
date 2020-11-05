@@ -12,6 +12,7 @@ import java.math.BigInteger;
 
 /**
  * 程序清单 5-20 在因式分解 servlet 中使用 Memoizer 来缓存结果
+ *
  */
 @ThreadSafe
 public class Factorizer extends GenericServlet implements Servlet {
