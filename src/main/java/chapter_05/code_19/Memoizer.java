@@ -1,12 +1,12 @@
 package chapter_05.code_19;
 
 import chapter_05.code_13.LaunderThrowable;
-import chapter_05.code_16.Computable;
 
+import java.math.BigInteger;
 import java.util.concurrent.*;
 
 /**
- * Final implementation of Memoizer.
+ * 程序清单 5-19 Memoizer 的最终实现
  */
 public class Memoizer<A, V> implements Computable<A, V> {
     private final ConcurrentMap<A, Future<V>> cache = new ConcurrentHashMap<>();
@@ -36,4 +36,15 @@ public class Memoizer<A, V> implements Computable<A, V> {
             }
         }
     }
+}
+
+class ExpensiveFunction implements Computable<String, BigInteger> {
+    public BigInteger compute(String arg) {
+        // 在经过长时间的计算后
+        return new BigInteger(arg);
+    }
+}
+
+interface Computable<A, V> {
+    V compute(A arg) throws InterruptedException;
 }
