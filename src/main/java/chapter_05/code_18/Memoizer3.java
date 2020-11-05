@@ -1,8 +1,8 @@
 package chapter_05.code_18;
 
 import chapter_05.code_13.LaunderThrowable;
-import chapter_05.code_16.Computable;
 
+import java.math.BigInteger;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ExecutionException;
@@ -10,7 +10,7 @@ import java.util.concurrent.Future;
 import java.util.concurrent.FutureTask;
 
 /**
- * Memoizing wrapper using FutureTask.
+ * 程序清单 5-18 基于 FutureTask 的 Memoizing 封装器
  */
 public class Memoizer3<A, V> implements Computable<A, V> {
     private final Map<A, Future<V>> cache = new ConcurrentHashMap<>();
@@ -35,4 +35,15 @@ public class Memoizer3<A, V> implements Computable<A, V> {
             throw LaunderThrowable.launderThrowable(e.getCause());
         }
     }
+}
+
+class ExpensiveFunction implements Computable<String, BigInteger> {
+    public BigInteger compute(String arg) {
+        // 在经过长时间的计算后
+        return new BigInteger(arg);
+    }
+}
+
+interface Computable<A, V> {
+    V compute(A arg) throws InterruptedException;
 }
