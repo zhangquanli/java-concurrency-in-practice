@@ -4,7 +4,7 @@ import java.math.BigInteger;
 import java.util.concurrent.BlockingQueue;
 
 /**
- * 程序清单 6-3 不可靠的取消操作将把生产者置于阻塞的操作中（不要这么做）
+ * 程序清单 7-3 不可靠的取消操作将把生产者置于阻塞的操作中（不要这么做）
  */
 public class BrokenPrimeProducer extends Thread {
     private final BlockingQueue<BigInteger> queue;
