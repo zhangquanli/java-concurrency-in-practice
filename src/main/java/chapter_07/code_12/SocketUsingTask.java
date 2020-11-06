@@ -1,14 +1,14 @@
 package chapter_07.code_12;
 
 import net.jcip.annotations.GuardedBy;
+import net.jcip.annotations.ThreadSafe;
 
 import java.io.IOException;
 import java.net.Socket;
-import java.util.concurrent.FutureTask;
-import java.util.concurrent.RunnableFuture;
+import java.util.concurrent.*;
 
 /**
- * Encapsulating nonstandard cancellation in a task with newTaskFor.
+ * 程序清单 7-12 通过 newTaskFor 将非标准的取消操作封装在一个任务中
  */
 public abstract class SocketUsingTask<T> implements CancellableTask<T> {
     @GuardedBy("this")
@@ -34,5 +34,38 @@ public abstract class SocketUsingTask<T> implements CancellableTask<T> {
                 return super.cancel(mayInterruptIfRunning);
             }
         };
+    }
+}
+
+interface CancellableTask<T> extends Callable<T> {
+    void cancel();
+
+    RunnableFuture<T> newTask();
+}
+
+@ThreadSafe
+class CancellingExecutor extends ThreadPoolExecutor {
+    public CancellingExecutor(int corePoolSize, int maximumPoolSize, long keepAliveTime, TimeUnit unit, BlockingQueue<Runnable> workQueue) {
+        super(corePoolSize, maximumPoolSize, keepAliveTime, unit, workQueue);
+    }
+
+    public CancellingExecutor(int corePoolSize, int maximumPoolSize, long keepAliveTime, TimeUnit unit, BlockingQueue<Runnable> workQueue, ThreadFactory threadFactory) {
+        super(corePoolSize, maximumPoolSize, keepAliveTime, unit, workQueue, threadFactory);
+    }
+
+    public CancellingExecutor(int corePoolSize, int maximumPoolSize, long keepAliveTime, TimeUnit unit, BlockingQueue<Runnable> workQueue, RejectedExecutionHandler handler) {
+        super(corePoolSize, maximumPoolSize, keepAliveTime, unit, workQueue, handler);
+    }
+
+    public CancellingExecutor(int corePoolSize, int maximumPoolSize, long keepAliveTime, TimeUnit unit, BlockingQueue<Runnable> workQueue, ThreadFactory threadFactory, RejectedExecutionHandler handler) {
+        super(corePoolSize, maximumPoolSize, keepAliveTime, unit, workQueue, threadFactory, handler);
+    }
+
+    protected <T> RunnableFuture<T> newTaskFor(Callable<T> callable) {
+        if (callable instanceof CancellableTask) {
+            return ((CancellableTask<T>) callable).newTask();
+        } else {
+            return super.newTaskFor(callable);
+        }
     }
 }
