@@ -5,7 +5,7 @@ import chapter_05.code_13.LaunderThrowable;
 import java.util.concurrent.*;
 
 /**
- * Cancelling a task using Future.
+ * 程序清单 7-10 通过 Future 来取消任务
  */
 public class TimedRun {
     private static final ExecutorService taskExec = Executors.newCachedThreadPool();
@@ -15,13 +15,13 @@ public class TimedRun {
         try {
             task.get(timeout, unit);
         } catch (TimeoutException e) {
-            // task will be cancelled below
+            // 接下来任务将被取消
         } catch (ExecutionException e) {
-            // exception thrown in task; rethrow
+            // 如果在任务中抛出了异常，那么重新抛出该异常
             throw LaunderThrowable.launderThrowable(e.getCause());
         } finally {
-            // Harmless if task already completed
-            task.cancel(true); // interrupt if running
+            // 如果任务已结束，那么执行取消操作也不会带来任何影响
+            task.cancel(true); // 如果任务正在运行，那么将被中断
         }
     }
 }
