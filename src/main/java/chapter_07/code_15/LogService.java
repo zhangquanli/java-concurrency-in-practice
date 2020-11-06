@@ -8,7 +8,7 @@ import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 
 /**
- * Adding reliable cancellation to LogWriter.
+ * 程序清单 7-15 向 LogWriter 添加可靠的取消操作
  */
 public class LogService {
     private final BlockingQueue<String> queue;
@@ -62,7 +62,7 @@ public class LogService {
                     writer.println(msg);
                 }
             } catch (InterruptedException e) {
-                // retry
+                // 重新尝试
             } finally {
                 writer.close();
             }
