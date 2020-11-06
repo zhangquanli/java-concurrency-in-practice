@@ -7,7 +7,7 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Interrupting a task in a dedicated thread.
+ * 程序清单 7-9 在专门的线程中中断任务
  */
 public class TimedRun2 {
     private static final ScheduledExecutorService cancelExec = Executors.newScheduledThreadPool(1);
