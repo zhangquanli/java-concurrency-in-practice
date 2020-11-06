@@ -23,6 +23,5 @@ public class TaskExecutionWebServer {
     }
 
     private static void handleRequest(Socket connection) {
-        // request-handling logic here
     }
 }
