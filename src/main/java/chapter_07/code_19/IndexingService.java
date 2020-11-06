@@ -6,7 +6,7 @@ import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 
 /**
- * Consumer thread for IndexingService.
+ * 程序清单 7-19 IndexingService 的消费者线程
  */
 public class IndexingService {
     private static final int CAPACITY = 1000;
@@ -56,7 +56,7 @@ public class IndexingService {
         }
 
         private void indexFil(File file) {
-            // index file
+            // 索引文件
         }
     }
 
@@ -65,14 +65,14 @@ public class IndexingService {
             try {
                 crawl(root);
             } catch (InterruptedException e) {
-                // fall through
+                // 发生异常
             } finally {
                 while (true) {
                     try {
                         queue.put(POISON);
                         break;
                     } catch (InterruptedException e) {
-                        // retry
+                        // 重新尝试
                     }
                 }
             }
