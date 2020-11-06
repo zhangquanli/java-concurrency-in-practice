@@ -21,7 +21,7 @@ public class PrimeProducer extends Thread {
                 queue.put(p);
             }
         } catch (InterruptedException e) {
-            // Allow thread to exit
+            // 允许线程退出
         }
     }
 
