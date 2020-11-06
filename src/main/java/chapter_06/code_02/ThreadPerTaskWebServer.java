@@ -5,7 +5,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 /**
- * Web server that starts a new thread for each request.
+ * 程序清单 6-2 在 Web 服务器中为每个请求启动一个新的线程（不要这么做）
  */
 public class ThreadPerTaskWebServer {
     public static void main(String[] args) throws IOException {
@@ -18,6 +18,5 @@ public class ThreadPerTaskWebServer {
     }
 
     private static void handleRequest(Socket connection) {
-        // request-handling logic here
     }
 }
