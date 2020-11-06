@@ -13,7 +13,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Using TrackingService to save unfinished tasks for later execution.
+ * 程序清单 7-22 使用 TrackingExecutorService 来保存未完成的任务以备后续执行
  */
 public abstract class WebCrawler {
     private volatile TrackingExecutor exec;
