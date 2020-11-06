@@ -4,7 +4,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- * UncaughtExceptionHandler that logs the exception.
+ * 程序清单 7-25 将异常写入日志的 UncaughtExceptionHandler
  */
 public class UEHLogger implements Thread.UncaughtExceptionHandler {
     public void uncaughtException(Thread t, Throwable e) {
