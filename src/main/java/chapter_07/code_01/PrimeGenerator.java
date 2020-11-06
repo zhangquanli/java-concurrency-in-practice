@@ -11,7 +11,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Using a volatile field to hold cancellation state.
+ * 程序清单 7-1 使用 volatile 类型的域来保存取消状态
  */
 @ThreadSafe
 public class PrimeGenerator implements Runnable {
