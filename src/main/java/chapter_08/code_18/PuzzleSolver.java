@@ -10,6 +10,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * 程序清单 8-18 在解决器中找不到解答
  */
 public class PuzzleSolver<P, M> extends ConcurrentPuzzleSolver<P, M> {
+
     private final AtomicInteger taskCount = new AtomicInteger(0);
 
     PuzzleSolver(Puzzle<P, M> puzzle) {
