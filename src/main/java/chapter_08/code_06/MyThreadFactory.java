@@ -5,7 +5,7 @@ import chapter_08.code_07.MyAppThread;
 import java.util.concurrent.ThreadFactory;
 
 /**
- * Custom thread factory
+ * 程序清单 8-6 自定义的线程工厂
  */
 public class MyThreadFactory implements ThreadFactory {
     private final String poolName;
