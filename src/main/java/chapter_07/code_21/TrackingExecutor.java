@@ -5,7 +5,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.TimeUnit;
 
 /**
- * ExecutorService that keeps track of cancelled tasks after shutdown.
+ * 程序清单 7-21 在 ExecutorService 中跟踪在关闭之后被取消的任务
  */
 public class TrackingExecutor {
     private final ExecutorService exec;
