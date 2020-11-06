@@ -6,7 +6,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
 /**
- * Task that deadlocks in a single-threaded Executor.
+ * 程序清单 8-1 在单线程 Executor 中任务发生死锁（不要这么做）
  */
 public class ThreadDeadLock {
     ExecutorService exec = Executors.newSingleThreadExecutor();
@@ -19,7 +19,7 @@ public class ThreadDeadLock {
         }
 
         public String call() throws Exception {
-            // Here's where we would actually read the file
+            // 在这里我们实际读取文件
             return "";
         }
     }
@@ -29,12 +29,12 @@ public class ThreadDeadLock {
             Future<String> header = exec.submit(new LoadFileTask("header.html"));
             Future<String> footer = exec.submit(new LoadFileTask("footer.html"));
             String page = renderBody();
-            // Will deadlock -- task waiting for result of subtask
+            // 将发生死锁——由于任务在等待子任务的结果
             return header.get() + page + footer.get();
         }
 
         private String renderBody() {
-            // Here's where we would actually render the page
+            // 在这里我们实际渲染页面
             return "";
         }
     }
