@@ -4,7 +4,7 @@ import java.math.BigInteger;
 import java.util.concurrent.BlockingQueue;
 
 /**
- * Using interruption for cancellation.
+ * 程序清单 7-5 通过中断来取消
  */
 public class PrimeProducer extends Thread {
     private final BlockingQueue<BigInteger> queue;
