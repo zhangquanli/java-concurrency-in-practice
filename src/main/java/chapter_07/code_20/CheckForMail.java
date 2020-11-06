@@ -7,7 +7,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
- * Using a private Executor whose lifetime is bounded by a method call.
+ * 程序清单 7-20 使用私有的 Executor，并且该 Executor 的生命周期受限于方法调用
  */
 public class CheckForMail {
     public boolean checkMail(Set<String> hosts, long timeout, TimeUnit unit)
