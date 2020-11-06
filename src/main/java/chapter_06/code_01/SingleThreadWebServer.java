@@ -5,7 +5,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 /**
- * Sequential web server.
+ * 程序清单 6-1 串行的 Web 服务器
  */
 public class SingleThreadWebServer {
     public static void main(String[] args) throws IOException {
