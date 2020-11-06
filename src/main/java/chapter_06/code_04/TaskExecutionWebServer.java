@@ -7,7 +7,7 @@ import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
 /**
- * Web server using a thread pool.
+ * 程序清单 6-4 基于线程池的 Web 服务器
  */
 public class TaskExecutionWebServer {
     private static final int N_THREADS = 100;
