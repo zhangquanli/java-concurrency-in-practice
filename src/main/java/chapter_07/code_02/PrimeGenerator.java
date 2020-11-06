@@ -12,7 +12,7 @@ import java.util.concurrent.Executors;
 import static java.util.concurrent.TimeUnit.SECONDS;
 
 /**
- * Generating a second's worth of prime numbers.
+ * 程序清单 7-2 一个仅运行一秒钟的素数生成器
  */
 @ThreadSafe
 public class PrimeGenerator implements Runnable {
