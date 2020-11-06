@@ -6,7 +6,7 @@ import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 
 /**
- * Shutdown with poison pill.
+ * 程序清单 7-17 通过 “毒丸” 对象来关闭服务
  */
 public class IndexingService {
     private static final int CAPACITY = 1000;
