@@ -8,7 +8,7 @@ import java.util.concurrent.RejectedExecutionException;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Logging service that uses an ExecutorService.
+ * 程序清单 7-16 使用 ExecutorService 的日志服务
  */
 public class LogService {
     private final ExecutorService exec;
