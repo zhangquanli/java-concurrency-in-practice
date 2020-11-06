@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.concurrent.*;
 
 /**
- * Using CompletionService to render page elements as they become available.
+ * 程序清单 6-15 使用 CompletionService，使页面元素在下载完成后立即显示出来
  */
 public abstract class Renderer {
     private final ExecutorService executor;
