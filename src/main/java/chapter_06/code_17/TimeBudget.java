@@ -5,7 +5,7 @@ import java.util.concurrent.*;
 import java.util.stream.Collectors;
 
 /**
- * Requesting travel quotes under a time budget.
+ * 程序清单 6-17 在预定时间内请求旅游报价
  */
 public class TimeBudget {
     private static ExecutorService exec = Executors.newCachedThreadPool();
@@ -33,4 +33,36 @@ public class TimeBudget {
         quotes.sort(ranking);
         return quotes;
     }
+}
+
+class QuoteTask implements Callable<TravelQuote> {
+    private final TravelCompany company;
+    private final TravelInfo info;
+
+    public QuoteTask(TravelCompany company, TravelInfo info) {
+        this.company = company;
+        this.info = info;
+    }
+
+    TravelQuote getFailureQuote(Throwable t) {
+        return null;
+    }
+
+    TravelQuote getTimeoutQuote(CancellationException e) {
+        return null;
+    }
+
+    public TravelQuote call() throws Exception {
+        return company.solicitQuote(info);
+    }
+}
+
+interface TravelCompany {
+    TravelQuote solicitQuote(TravelInfo travelInfo) throws Exception;
+}
+
+interface TravelInfo {
+}
+
+interface TravelQuote {
 }
