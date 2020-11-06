@@ -7,7 +7,7 @@ import java.util.concurrent.RejectedExecutionException;
 import java.util.concurrent.Semaphore;
 
 /**
- * Using a Semaphore to throttle task submission.
+ * 程序清单 8-4 使用 Semaphore 来控制任务的提交速率
  */
 @ThreadSafe
 public class BoundedExecutor {
