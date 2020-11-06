@@ -3,7 +3,7 @@ package chapter_06.code_16;
 import java.util.concurrent.*;
 
 /**
- * Fetching an advertisement with a time budget.
+ * 程序清单 6-16 在指定时间内获取广告信息
  */
 public class RenderWithTimeBudget {
     private static final Ad DEFAULT_AD = new Ad();
@@ -13,11 +13,11 @@ public class RenderWithTimeBudget {
     Page renderPageWithAd() throws InterruptedException {
         long endNanos = System.nanoTime() + TIME_BUDGET;
         Future<Ad> f = exec.submit(new FetchAdTask());
-        // Render the page while waiting for the ad
+        // 在等待广告的同时显示页面
         Page page = renderPageBody();
         Ad ad;
         try {
-            // Only wait for the remaining time budget
+            // 只等待指定的时间长度
             long timeLeft = endNanos - System.nanoTime();
             ad = f.get(timeLeft, TimeUnit.NANOSECONDS);
         } catch (ExecutionException e) {
