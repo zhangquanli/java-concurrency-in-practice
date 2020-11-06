@@ -3,7 +3,7 @@ package chapter_07.code_07;
 import java.util.concurrent.BlockingQueue;
 
 /**
- * 程序清单 7-6 将 InterruptedException 传递给调用者
+ * 程序清单 7-7 不可取消的任务在退出前恢复中断
  */
 public class NoncancelableTask {
     public Task getNextTask(BlockingQueue<Task> queue) {
@@ -14,7 +14,7 @@ public class NoncancelableTask {
                     return queue.take();
                 } catch (InterruptedException e) {
                     interrupted = true;
-                    // fall through and retry
+                    // 重新尝试
                 }
             }
         } finally {
