@@ -17,6 +17,5 @@ public class SingleThreadWebServer {
     }
 
     private static void handlerRequest(Socket connection) {
-        // request-handling logic here
     }
 }
