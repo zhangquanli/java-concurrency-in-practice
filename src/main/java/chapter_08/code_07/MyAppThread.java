@@ -5,7 +5,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- * Custom thread base class.
+ * 程序清单 8-7 定制 Thread 基类
  */
 public class MyAppThread extends Thread {
     public static final String DEFAULT_NAME = "MyAppThread";
@@ -25,7 +25,7 @@ public class MyAppThread extends Thread {
     }
 
     public void run() {
-        // Copy debug flag to ensure consistent value throughout.
+        // 复制 debug 标志以确保一致的值
         boolean debug = debugLifecycle;
         if (debug) {
             log.log(Level.SEVERE, "Created " + getName());
