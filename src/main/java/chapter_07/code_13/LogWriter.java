@@ -6,7 +6,7 @@ import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 
 /**
- * Producer-consumer logging service with no shutdown support.
+ * 程序清单 7-13 不支持关闭的生产者——消费者日志服务
  */
 public class LogWriter {
     private final BlockingQueue<String> queue;
