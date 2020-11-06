@@ -5,7 +5,7 @@ import java.util.TimerTask;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Class illustrating confusing Timer behavior.
+ * 程序清单 6-9 错误的 Timer 行为
  */
 public class OutOfTime {
     public static void main(String[] args) throws InterruptedException {
