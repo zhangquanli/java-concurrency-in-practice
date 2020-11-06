@@ -5,7 +5,7 @@ import java.io.InputStream;
 import java.net.Socket;
 
 /**
- * Encapsulating nonstandard cancellation in a Thread by overriding interrupt。
+ * 程序清单 7-11 通过改写 interrupt 方法将非标准的取消操作封装在 Thread 中
  */
 public class ReaderThread extends Thread {
     private static final int BUF_SIZE = 512;
@@ -38,7 +38,7 @@ public class ReaderThread extends Thread {
                 }
             }
         } catch (IOException e) {
-            // Allow thread to exit
+            // 允许线程退出
         }
     }
 
