@@ -24,7 +24,7 @@ public class CooperatingNoDeadlock {
             return location;
         }
 
-        public synchronized void setLocation(Point location) {
+        public void setLocation(Point location) {
             boolean reachedDestination;
             synchronized (this) {
                 this.location = location;
