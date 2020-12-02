@@ -33,16 +33,21 @@ public class GrumpyBoundedBuffer<V> extends BaseBoundedBuffer<V> {
 
 class ExampleUsage {
     private GrumpyBoundedBuffer<String> buffer;
-    int sleepGranularity = 50;
+    private static final int SLEEP_GRANULARITY = 50;
+
+    public ExampleUsage(GrumpyBoundedBuffer<String> buffer) {
+        this.buffer = buffer;
+    }
 
     void useBuffer() throws InterruptedException {
         while (true) {
             try {
                 String item = buffer.take();
                 // 对于 item 执行一些操作
+                System.out.println(item);
                 break;
             } catch (BufferEmptyException e) {
-                Thread.sleep(sleepGranularity);
+                Thread.sleep(SLEEP_GRANULARITY);
             }
         }
     }
